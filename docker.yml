@@ -46,13 +46,8 @@
     docker_image:
       name: httpd
       source: pull
-  
-  - name: Creating html file for httpd
-    file:
-             path: /webpages
-             state: directory
-  
-  - name: Copying html file  
+
+- name: Copying html file  
     copy:
        src: "index.html"
        dest: "/webpage/"
